@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2016", // 编译后的js版本
+    "module": "commonjs", // js的导出模块类型
+    "declaration": true, // 编译导出包含类型文件
+    "outDir": "dist", // 编译后导出的目录
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "rootDir": "src", // 要编译的代码开始目录
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  },
+  // ts编译时忽略的文件
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

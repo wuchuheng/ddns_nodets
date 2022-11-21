@@ -4,8 +4,13 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "build:dev": "tsc --sourceMap true --declarationMap true",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
 }

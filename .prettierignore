@@ -1,0 +1,6 @@
+node_modules
+dist
+.git
+.idea
+.pnpm-debug.log
+pnpm-lock.yaml

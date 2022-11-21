@@ -7,7 +7,7 @@
  */
 
 const main = () => {
-    console.log("Hello world!!!")
+    console.log("Are you ok?")
 }
 
 export default main()

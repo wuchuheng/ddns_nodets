@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --exec \"npm run dev:build\"",
+    "dev": "nodemon --exec \"npm run dev:build && npm run start\"",
+    "start": "node dist/index.js",
     "dev:build": "tsc --sourceMap true --declarationMap true",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --exec \"npm run prettier && npm run lint:fix && npm run dev:build && npm run start\"",
-    "start": "node dist/index.js",
+    "dev": "nodemon --exec \"npm run dev:build && npm run start && node dist/index.js\"",
+    "start": "npm run build && pm2 start dist/index.js --name DNS && pm2 logs DNS",
     "lint:fix": "eslint 'src/**/*.ts' --fix",
     "dev:build": "tsc --sourceMap true --declarationMap true",
     "prettier": "prettier --write .",
@@ -15,12 +15,22 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@alicloud": "link:@types/@alicloud",
+    "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "nodemon": "^2.0.20",
+    "pm2": "^5.2.2",
     "prettier": "2.7.1",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@alicloud/alidns20150109": "^3.0.0",
+    "@alicloud/openapi-client": "^0.4.4",
+    "@alicloud/tea-typescript": "^1.8.0",
+    "@alicloud/tea-util": "^1.4.5",
+    "dotenv": "^16.0.3"
   }
 }
